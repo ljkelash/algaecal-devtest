@@ -1,0 +1,30 @@
+// Bootstrap theme overrides
+// Color System
+$primary: #38a33f;
+$secondary: #676767;
+$info: #008ba3;
+$warning: #e26e22;
+
+// Fonts
+$font-family-base: 'Glober',
+'Roboto',
+sans-serif;
+$headings-font-weight: 700;
+
+// Links
+$link-color: $info;
+
+// Buttons
+$input-btn-padding-x: 1.66rem;
+
+
+// Cards
+$card-border-radius: .125rem;
+
+// import Bootstrap CSS
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Primary Button Border
+.btn-primary {
+    border-bottom: solid 4px rgba(0, 0, 0, .167);
+}

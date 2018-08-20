@@ -1,0 +1,107 @@
+// import bootstrap styles and custom theme
+@import "./theme";
+// Reusable Class Styles
+.text-underline {
+    text-decoration: underline;
+}
+
+.line-height-2 {
+    line-height: 2rem;
+}
+
+.letter-space-1 {
+    letter-spacing: .1rem;
+}
+
+.highlight-text {
+    background-image: url(../images/ui/highlight-text.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-banner,
+#bundles {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.supplement-table {
+    border: solid 2px;
+    font-weight: bold;
+
+    thead tr:last-child {
+        font-weight: normal;
+        border-top: solid 1rem;
+        border-bottom: solid .5rem;
+
+        td:last-child {
+            text-align: right;
+        }
+    }
+    tbody {
+        border-bottom: solid 1rem;
+
+        td {
+            width: 66%
+        }
+        td:last-child {
+            text-align: right;
+        }
+    }
+}
+
+.affiliates {
+    line-height: .83rem;
+}
+
+
+footer {
+    nav a {
+        margin-right: .33rem;
+        padding-right: .33rem;
+        border-right: solid 1px;
+        line-height: 1
+    }
+    nav a:last-child {
+        border: none;
+    }
+}
+
+.intro-text {
+    font-size: 2rem;
+    line-height: 2.75rem;
+
+    .emphasize {
+        font-size: 2.2rem;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .intro-text {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        .emphasize {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .intro-text {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        .emphasize {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .intro-text {
+        font-size: 2rem;
+        line-height: 2.75rem;
+        .emphasize {
+            font-size: 2.4rem;
+        }
+    }
+}
