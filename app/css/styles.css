@@ -6368,6 +6368,9 @@ footer nav a:last-child {
   .intro-text .emphasize {
     font-size: 2.2rem; }
 
+.speak-now {
+  display: none; }
+
 @media (min-width: 576px) {
   .intro-text {
     font-size: 1.6rem;

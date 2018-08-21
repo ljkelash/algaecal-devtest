@@ -1,5 +1,5 @@
 $(function() {
-    var apiUrl = 'https://www.algaecal.com/wp-json/acf/v3/options/options'
+    var apiUrl = 'https://www.algaecal.com/wp-json/acf/v3/options/options';
     $.getJSON(apiUrl, function(data) {
         console.log(data);
         var data = data.acf,
@@ -34,5 +34,21 @@ $(function() {
         // TODO Error Fallbacks
         console.log('error');
 
+    });
+
+    // get Wista video handle
+    window._wq = window._wq || [];
+    _wq.push({
+        id: "cecdwaq3dz",
+        onReady: function(video) {
+
+            // Display bundles at 2:13
+            video.bind('timechange', function(t) {
+                if (t > 133) {
+                    $('#bundles').removeClass('d-none');
+                    return video.unbind;
+                }
+            });
+        }
     });
 });
