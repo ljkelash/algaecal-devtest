@@ -195,9 +195,25 @@
                 <img class="seven-yr-seal p-3" src="/images/brand/stronger-bones-7yr.png" class="img-fluid">
                 <h2 class="text-capitalize text-warning h5">Stronger Bones for 7 Years Guarantee</h2>
                 <div class="seven-yr-short-cp">
-                    <p>When you follow directions for use of AlgaeCal Plus and Strontium Boost – we guarantee you will see increased bone density in EVERY follow-up bone scan you have while using these 2 products - or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years! Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked!
-                        <!-- TODO: Launch full copy modal -->
-                        <a href="#" class="text-underline">Click Here for Details</a>
+                    <p>When you follow directions for use of AlgaeCal Plus and Strontium Boost – we guarantee you will see increased bone density in EVERY follow-up bone scan you have while using these 2 products - or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years! Also, if you are unsatisfied at any time you can return my product for a full refund, <span class="text-nowrap">no questions asked!</span>
+                        <!-- Launch Full Guarantee Modal -->
+                        <button type="button" data-toggle="modal" data-target="#seven-yr-gtd-modal" class="p-0 text-underline btn btn-link">Click Here for Details <span class="sr-only">: opens dialog</span></button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="seven-yr-gtd-modal" tabindex="-1" role="dialog" aria-labelledby="seven-yr-title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="seven-yr-title">Stronger Bones for 7 Years Guarantee</h5>
+                                        <button id="dismiss-modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div id="seven-yr-full-cp" class="modal-body">
+                                        ...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </p>
                 </div>
                 <img src="/images/brand/dean-neuls-signature.png" alt="">
@@ -256,5 +272,11 @@
         </nav>
         <p>Copyright &copy; 2018 AlgaeCal</p>
     </footer>
+    <!-- jQuery & Popper Required for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 
 </html>

@@ -4,15 +4,15 @@ $(function() {
         console.log(data);
         var data = data.acf,
             defaultPhone = data['default_phone_number'],
-            sevenYrTitle = data['7yr_title'],
-            sevenYrShortCp = data['7yr_short_copy'],
-            sevenYrFullCp = data['7yr_full_copy'],
-            sevenYrSealUrl = data['seven_year_guarantee_seal'].url;
+            sevenYrFullCp = data['7yr_full_copy'];
 
-        console.log(sevenYrTitle);
-        $('.seven-yr-seal').attr('src', sevenYrSealUrl);
-        $('.seven-yr-title').text(sevenYrTitle);
-        $('.seven-yr-short-cp').html(sevenYrShortCp);
+        // Show Seven Year Guarantee text on modal launch
+        $('#seven-yr-gtd-modal').on('show.bs.modal', function() {
+            $('#seven-yr-full-cp').html(sevenYrFullCp);
+            // resize the large image
+            var modal = $(this);
+            modal.find('img.size-large').addClass('img-fluid');
+        })
 
 
     }).fail(function() {

@@ -21,6 +21,14 @@ $input-btn-padding-x: 1.66rem;
 // Cards
 $card-border-radius: .125rem;
 
+
+// Modals
+$modal-backdrop-opacity: .66;
+$modal-inner-padding: 1.66rem;
+$modal-lg: 860px;
+$modal-content-border-radius: .125rem;
+
+
 // import Bootstrap CSS
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
