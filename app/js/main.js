@@ -31,7 +31,8 @@ $(function() {
 
 
     }).fail(function() {
-        // TODO Error Fallbacks
+    	// Prevent broken links
+        $('#phone-link, #modal-btn').hide();
         console.log('error');
 
     });
@@ -41,11 +42,12 @@ $(function() {
     _wq.push({
         id: "cecdwaq3dz",
         onReady: function(video) {
-
+        	var bundles = $('#bundles');
+        	bundles.hide();
             // Display bundles at 2:13
             video.bind('timechange', function(t) {
                 if (t > 133) {
-                    $('#bundles').removeClass('d-none');
+                    $('#bundles').removeClass('d-none').slideDown(700);
                     return video.unbind;
                 }
             });
