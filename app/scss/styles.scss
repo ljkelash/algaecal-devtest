@@ -27,8 +27,9 @@
 }
 
 .intro-text {
-    font-size: 2rem;
+    font-size: 1.83rem;
     line-height: 2.75rem;
+    background: url(../images/ui/white-line.png) no-repeat center 8%;
 
     .emphasize {
         max-width: 290px;
@@ -110,8 +111,14 @@
     line-height: .83rem;
     max-width: 400px;
     margin: 0 auto;
-}
 
+    .bg-dk-green {
+    	background-color: $green !important;
+    }
+}
+.signature {
+	border-bottom: solid 2px;
+}
 
 footer {
     nav a {
