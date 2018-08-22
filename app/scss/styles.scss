@@ -1,5 +1,6 @@
 // import bootstrap styles and custom theme
 @import "./theme";
+
 // Reusable Class Styles
 .text-underline {
     text-decoration: underline;
@@ -12,17 +13,30 @@
 .letter-space-1 {
     letter-spacing: .1rem;
 }
-
-.highlight-text {
-    background-image: url(../images/ui/highlight-text.png);
-    background-position: center center;
-    background-repeat: no-repeat;
+// TODO: convert to svg
+.bg-leaf {
+	background: url(../images/ui/leaf-texture.png) no-repeat bottom left;
+	background-size: cover;
 }
 
-.hero-banner,
+.intro-text {
+    font-size: 2rem;
+    line-height: 2.75rem;
+
+    .emphasize {
+        max-width: 290px;
+        background: url(../images/ui/underline_red.png) no-repeat bottom left;
+        font-size: 2.2rem;
+        line-height: 1.38;
+    }
+}
+
 #bundles {
-    max-width: 1260px;
-    margin: 0 auto;
+    .highlight-text {
+        background-image: url(../images/ui/highlight-text.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 }
 
 .supplement-table {
@@ -42,7 +56,7 @@
         border-bottom: solid 1rem;
 
         td {
-            width: 66%
+            width: 200px;
         }
         td:last-child {
             text-align: right;
@@ -52,6 +66,8 @@
 
 .affiliates {
     line-height: .83rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 
@@ -60,52 +76,24 @@ footer {
         margin-right: .33rem;
         padding-right: .33rem;
         border-right: solid 1px;
-        line-height: 1
+        line-height: 1;
+        color: $secondary;
     }
     nav a:last-child {
         border: none;
     }
 }
 
-.intro-text {
-    font-size: 2rem;
-    line-height: 2.75rem;
-
-    .emphasize {
-        font-size: 2.2rem;
-    }
-}
-
-//     .speak-now {
-    //     display: none;
-    // }
-
-@include media-breakpoint-up(sm) {
-    .intro-text {
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        .emphasize {
-            font-size: 1.8rem;
-        }
-    }
-}
-
-@include media-breakpoint-up(md) {
-    .intro-text {
-        font-size: 1.8rem;
-        line-height: 2.6rem;
-        .emphasize {
-            font-size: 2.6rem;
-        }
-    }
-}
-
 @include media-breakpoint-up(lg) {
-    .intro-text {
-        font-size: 2rem;
-        line-height: 2.75rem;
-        .emphasize {
-            font-size: 2.4rem;
-        }
+    #bundles {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+}
+
+// Medium screen
+@media (min-width: 567px) and (max-width: 767px) {
+    .container {
+        max-width: 700px;
     }
 }
