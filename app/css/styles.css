@@ -6324,6 +6324,12 @@ a.text-dark:hover, a.text-dark:focus {
 .letter-space-1 {
   letter-spacing: .1rem; }
 
+.text-small {
+  font-size: .83rem; }
+
+.break-word {
+  word-wrap: break-word; }
+
 .bg-leaf {
   background: url(../images/ui/leaf-texture.png) no-repeat bottom left;
   background-size: cover; }
@@ -6341,6 +6347,36 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(../images/ui/highlight-text.png);
   background-position: center center;
   background-repeat: no-repeat; }
+
+#bundles .card-body {
+  position: relative; }
+
+#bundles .savings-sticker {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -2rem;
+  right: -2rem; }
+  #bundles .savings-sticker .savings-text {
+    margin: 1.125rem .5rem;
+    line-height: .75; }
+
+.gnt-btn {
+  position: relative;
+  padding-left: 75px; }
+
+.gnt-btn > img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -20px;
+  left: -20px; }
+
+.gnt-btn.gnt-buy > img {
+  width: 110px;
+  height: 110px;
+  top: -35px;
+  left: -10px; }
 
 .supplement-table {
   border: solid 2px;
@@ -6373,11 +6409,27 @@ footer nav a {
 footer nav a:last-child {
   border: none; }
 
+@media (min-width: 768px) {
+  #bundles .savings-sticker {
+    top: 2.5rem; } }
+
 @media (min-width: 992px) {
   #bundles {
     max-width: 1360px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+    #bundles .savings-sticker {
+      top: .5rem;
+      right: -1.75rem; } }
 
 @media (min-width: 567px) and (max-width: 767px) {
   .container {
     max-width: 700px; } }
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .gnt-btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 80px; }
+  .gnt-btn > img {
+    top: -85px;
+    left: calc(50% - 40px); } }
