@@ -6373,14 +6373,16 @@ a.text-dark:hover, a.text-dark:focus {
   top: -20px;
   left: -20px; }
 
-.gnt-btn.gnt-buy > img {
+.gnt-btn.btn-block > img {
   width: 110px;
   height: 110px;
   top: -35px;
   left: -10px; }
 
+.table-wrap {
+  border: solid 2px; }
+
 .supplement-table {
-  border: solid 2px;
   font-weight: bold; }
   .supplement-table thead tr:last-child {
     font-weight: normal;

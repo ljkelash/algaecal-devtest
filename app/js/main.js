@@ -1,7 +1,6 @@
 $(function() {
     var apiUrl = 'https://www.algaecal.com/wp-json/acf/v3/options/options';
     $.getJSON(apiUrl, function(data) {
-        console.log(data);
         var data = data.acf,
             defaultPhone = data['default_phone_number'],
             officeHours = data['office_hours'],
@@ -12,6 +11,7 @@ $(function() {
         $('.default-phone').hide().text(defaultPhone).fadeIn('fast');
 
         // Get current day and time
+        // Note: this is browser local time; may need to convert to the correct time zone
         var today = new Date().getDay(),
             now = new Date(Date.now()),
             currentTime = now.getHours() + '' + now.getMinutes();
