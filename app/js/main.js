@@ -10,11 +10,20 @@ $(function() {
         $('#phone-link').attr('href', 'tel:+' + defaultPhone);
         $('.default-phone').hide().text(defaultPhone).fadeIn('fast');
 
-        // Get current day and time
-        // Note: this is browser local time; may need to convert to the correct time zone
-        var today = new Date().getDay(),
-            now = new Date(Date.now()),
-            currentTime = now.getHours() + '' + now.getMinutes();
+        // Get current day and time (PDT Time Zone)
+        var d = new Date(),
+        	today = d.getDay(),
+            currentHour = addZero(d.getUTCHours() - 7),
+            currentMinute = addZero(d.getMinutes()),
+            currentTime = currentHour + '' + currentMinute;
+
+        // display hours and minutes with two digits
+      	function addZero(i) {
+        	if (i < 10 ) {
+        		i = '0' + i;
+        	}
+        	return i;
+        }
 
         // show speak-now text if we're inside business hours
         if (currentTime >= officeHours[today].starting_time && currentTime <= officeHours[today].closing_time) {
@@ -31,7 +40,7 @@ $(function() {
 
 
     }).fail(function() {
-    	// Prevent broken links
+        // Prevent broken links
         $('#phone-link, #modal-btn').hide();
         console.log('error');
 
@@ -42,8 +51,8 @@ $(function() {
     _wq.push({
         id: "cecdwaq3dz",
         onReady: function(video) {
-        	var bundles = $('#bundles');
-        	bundles.hide();
+            var bundles = $('#bundles');
+            bundles.hide();
             // Display bundles at 2:13
             video.bind('timechange', function(t) {
                 if (t > 133) {
